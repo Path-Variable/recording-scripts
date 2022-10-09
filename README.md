@@ -7,7 +7,7 @@ The scripts are written in bash.
 I will outline their purpose here in short.
 
  1. cleanup.sh - This will remove any video files in X path after the given X days that are specified as a command line argument
- 2. location-room.servie - this system service will execute the recording script and make sure it restarts in case of system reboot
+ 2. location-room.service - this system service will execute the recording script and make sure it restarts in case of system reboot
  3. record-location-room.sh - this is the main recording script. it calls ffmpeg and creates an apendable video file for the whole day
  4. remux.sh - this script will convert the previous days recording into an mp4 file extension
  5. watchdog.sh - this script serves a watchdog function that will check if the ffmpeg recording has stalled and restart it
