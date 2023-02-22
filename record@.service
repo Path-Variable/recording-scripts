@@ -4,12 +4,12 @@ After=network.target
 
 [Service]
 Type=simple
-Environment="REC_SCRIPT=/path/to/script/record_location_room.sh"
+EnvironmentFile=path/to/env_files/%i.env
 Restart=always
 RestartSec=3
 User=your-user
 Group=your-group
-ExecStart=/bin/bash /path/to/script/watchdog.sh
+ExecStart=/bin/bash /path/to/watchdog.sh
 TimeoutStartSec=0
 WatchdogSec=16
 NotifyAccess=all
